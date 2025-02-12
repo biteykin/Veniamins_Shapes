@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 # Подключение к БД на Railway
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:RiFCVtQKPvaTSqFqGKxDUJtlCVfRanql@monorail.proxy.rlwy.net:58544/railway")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:RiFCVtQKPvaTSqFqGKxDUJtlCVfRanql@postgres.railway.internal:5432/railway")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
